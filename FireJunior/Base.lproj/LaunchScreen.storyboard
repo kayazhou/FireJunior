@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H.M.K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-pi-P1o">
-                                <rect key="frame" x="161" y="322" width="52.5" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <rect key="frame" x="155" y="120" width="65.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Pea-pi-P1o" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Kke-7X-JL5"/>
                             <constraint firstItem="Pea-pi-P1o" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="i2S-hP-vKQ"/>
+                            <constraint firstItem="Pea-pi-P1o" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="v95-Gt-fwj"/>
                         </constraints>
                     </view>
                 </viewController>

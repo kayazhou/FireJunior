@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80A42CD1ECCEEF8007DA615 /* LaunchScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = A80A42CC1ECCEEF8007DA615 /* LaunchScreen.sks */; };
+		A80A42CF1ECCEFB8007DA615 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A42CE1ECCEFB8007DA615 /* LaunchScreen.swift */; };
+		A80A42D11ECDEC28007DA615 /* RainFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A80A42D01ECDEC28007DA615 /* RainFire.sks */; };
+		A80A42D51ECDFBFC007DA615 /* Spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = A80A42D41ECDFBFC007DA615 /* Spark.sks */; };
 		A826A0BD1ECC90D8000091DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A826A0BC1ECC90D8000091DB /* AppDelegate.swift */; };
 		A826A0BF1ECC90D8000091DB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A826A0BE1ECC90D8000091DB /* GameScene.sks */; };
 		A826A0C11ECC90D8000091DB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A826A0C01ECC90D8000091DB /* Actions.sks */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A80A42CC1ECCEEF8007DA615 /* LaunchScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LaunchScreen.sks; sourceTree = "<group>"; };
+		A80A42CE1ECCEFB8007DA615 /* LaunchScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		A80A42D01ECDEC28007DA615 /* RainFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RainFire.sks; sourceTree = "<group>"; };
+		A80A42D41ECDFBFC007DA615 /* Spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Spark.sks; sourceTree = "<group>"; };
 		A826A0B91ECC90D8000091DB /* FireJunior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireJunior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A826A0BC1ECC90D8000091DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A826A0BE1ECC90D8000091DB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 				A826A0D51ECC91FE000091DB /* Explosion.sks */,
 				A826A0D61ECC91FE000091DB /* Fire.sks */,
 				A826A0D71ECC91FE000091DB /* SnowBackground.sks */,
+				A80A42D01ECDEC28007DA615 /* RainFire.sks */,
+				A80A42D41ECDFBFC007DA615 /* Spark.sks */,
 			);
 			name = Emmitters;
 			sourceTree = "<group>";
@@ -105,6 +115,8 @@
 				A826A0C41ECC90D8000091DB /* GameViewController.swift */,
 				A826A0C01ECC90D8000091DB /* Actions.sks */,
 				A826A0C61ECC90D8000091DB /* Main.storyboard */,
+				A80A42CC1ECCEEF8007DA615 /* LaunchScreen.sks */,
+				A80A42CE1ECCEFB8007DA615 /* LaunchScreen.swift */,
 				A80A42CB1ECCB6DC007DA615 /* Game */,
 				A80A42C91ECCB6A3007DA615 /* Sounds */,
 				A80A42CA1ECCB6B8007DA615 /* Emmitters */,
@@ -176,11 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A826A0DD1ECC91FE000091DB /* torpedo.mp3 in Resources */,
+				A80A42D11ECDEC28007DA615 /* RainFire.sks in Resources */,
 				A826A0D91ECC91FE000091DB /* explosion.mp3 in Resources */,
+				A80A42D51ECDFBFC007DA615 /* Spark.sks in Resources */,
 				A826A0C81ECC90D8000091DB /* Main.storyboard in Resources */,
 				A826A0DC1ECC91FE000091DB /* SnowBackground.sks in Resources */,
 				A826A0BF1ECC90D8000091DB /* GameScene.sks in Resources */,
 				A826A0CA1ECC90D8000091DB /* Assets.xcassets in Resources */,
+				A80A42CD1ECCEEF8007DA615 /* LaunchScreen.sks in Resources */,
 				A826A0DF1ECC929A000091DB /* BlueFire.sks in Resources */,
 				A826A0CD1ECC90D8000091DB /* LaunchScreen.storyboard in Resources */,
 				A826A0DB1ECC91FE000091DB /* Fire.sks in Resources */,
@@ -196,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A80A42CF1ECCEFB8007DA615 /* LaunchScreen.swift in Sources */,
 				A826A0C31ECC90D8000091DB /* GameScene.swift in Sources */,
 				A826A0C51ECC90D8000091DB /* GameViewController.swift in Sources */,
 				A826A0BD1ECC90D8000091DB /* AppDelegate.swift in Sources */,

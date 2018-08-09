@@ -29,7 +29,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         }
     }
     var isPlayerExsit = true
-    
+    var isTouched = false
     var gameTimer:Timer!
     var possibleAliens = ["alien","alien2","alien3"]
     
@@ -67,6 +67,13 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
                 self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
             }
         }
+
+        Timer.scheduledTimer(timeInterval: 0.2,
+                             target: self,
+                             selector: #selector(fireTorpedo),
+                             userInfo: nil,
+                             repeats: true)
+
     }
     
     func addPlayer() {
@@ -77,6 +84,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         player.physicsBody?.isDynamic = false
         player.physicsBody?.categoryBitMask = playerCategory
         player.physicsBody?.contactTestBitMask = alienCategory
+        player.name = "plane"
         
         self.addChild(player)
         isPlayerExsit = true
@@ -109,8 +117,19 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         alien.run(SKAction.sequence(actionArray))
         
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        /* Called when a touch begins */
+
+        var location:CGPoint! = touches.first?.location(in: self)
+        var node = self.atPoint(location)
+
+        if node.name == "plane" {
+            isTouched = true// 手指点击到飞机
+        }
+    }
+
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isTouched = false
         switch touches.count {
         case 1:
             fireTorpedo()
@@ -253,20 +272,37 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         score += 5
     }
     
-    override func didSimulatePhysics() {
-        if (player.position.x > 20) && (player.position.x < (self.size.width-20)) {
-            player.position.x += xAcceleration * 50
+//    override func didSimulatePhysics() {
+//        if (player.position.x > 20) && (player.position.x < (self.size.width-20)) {
+//            player.position.x += xAcceleration * 50
+//        }
+//        if (player.position.x < 20) && xAcceleration > 0{
+//            player.position.x += xAcceleration * 50
+//        }
+//        if (player.position.x > (self.size.width-20)) && xAcceleration < 0 {
+//            player.position.x += xAcceleration * 50
+//        }
+//
+//    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if isTouched {
+//            var location:CGPoint! = touches.first!.location(in: self)
+//            player.position = CGPoint(x: location.x, y: location.y)
+//        }
+        let location:CGPoint! = touches.first!.location(in: self)
+        if location.x > player.position.x + 10 {
+            player.position.x += 3
+        } else if location.x < player.position.x - 10 {
+            player.position.x -= 3
         }
-        if (player.position.x < 20) && xAcceleration > 0{
-            player.position.x += xAcceleration * 50
+        if location.y > player.position.y + 10 {
+            player.position.y += 3
+        } else if location.y < player.position.y - 10{
+            player.position.y -= 3
         }
-        if (player.position.x > (self.size.width-20)) && xAcceleration < 0 {
-            player.position.x += xAcceleration * 50
-        }
-        
     }
-    
-    
+
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
         for var disAlien in disabledAliens{

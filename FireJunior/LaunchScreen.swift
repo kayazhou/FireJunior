@@ -20,14 +20,14 @@ class LaunchScreen: SKScene {
         var letter2 = SKLabelNode()
         var letter3 = SKLabelNode()
         
-        letter1.text = "H."
+        letter1.text = "F."
         letter1.fontSize = 24
         letter1.fontName = "System"
         letter1.fontColor = UIColor.white
         letter1.physicsBody?.restitution = 0.3
         
         
-        letter2.text = "M."
+        letter2.text = "A."
         letter2.fontSize = 24
         letter2.fontName = "System"
         letter2.fontColor = UIColor.white
